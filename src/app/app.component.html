@@ -1,0 +1,21 @@
+<div class="app-root">
+  <ng-container *ngIf="isDashboardRoute(); else loginOnly">
+    <div class="d-flex">
+      <app-sidebar [activeMenu]="activeMenu" (menuChange)="onMenuChange($event)" (logoutEvent)="onLogout()"></app-sidebar>
+      <div class="main-content flex-grow-1" style="margin-left:240px; min-height:100vh; background:#f8f9fa;">
+        <app-navbar [title]="getMenuTitle()" [notifications]="2"></app-navbar>
+        <div class="container-fluid mt-4">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #loginOnly>
+    <div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+      <div class="w-100" style="max-width: 400px;">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
