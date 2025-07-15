@@ -11,7 +11,7 @@ import { UserTableComponent } from './user-table/user-table.component';
 import { SettingsComponent } from './settings/settings.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
-import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
     AppRoutingModule
   ],
   providers: [
-    provideCharts(withDefaultRegisterables())
+
   ],
   bootstrap: [AppComponent]
 })

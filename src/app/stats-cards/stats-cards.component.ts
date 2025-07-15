@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ChartConfiguration } from 'chart.js';
+
 
 @Component({
   selector: 'app-stats-cards',
@@ -16,10 +16,5 @@ export class StatsCardsComponent {
     { data: [12, 19, 3, 5, 2, 3], label: 'Ventes' },
     { data: [8, 11, 7, 6, 4, 5], label: 'Utilisateurs' }
   ];
-  barChartOptions: ChartConfiguration['options'] = {
-    responsive: true,
-    plugins: {
-      legend: { display: true },
-    }
-  };
+
 }
