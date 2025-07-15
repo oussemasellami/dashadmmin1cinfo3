@@ -30,6 +30,19 @@
 <div class="card border-0 shadow mb-4">
   <div class="card-body">
     <h5 class="card-title">Statistiques mensuelles</h5>
-    
+    <div style="display: block; width: 100%; max-width: 600px; margin: 0 auto;">
+      <canvas baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        type="bar">
+      </canvas>
+    </div>
+    <div style="display: block; width: 100%; max-width: 400px; margin: 2rem auto 0 auto;">
+      <canvas baseChart
+        [data]="pieChartData"
+        [options]="pieChartOptions"
+        type="pie">
+      </canvas>
+    </div>
   </div>
 </div>
